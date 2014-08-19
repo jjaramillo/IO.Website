@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <Field ID="{33C41ADD-6790-409F-9F55-F85F129F3E6F}" Name="IO_Website_Name" StaticName="IO_Website_Name" DisplayName="Nombres" Group="IO Sitio Web" 
+         Type="Text" MaxLength="60"/>
+  <Field ID="{E5A4F8A2-9968-407D-A522-2EE5386D093A}" Name="IO_Website_LastName" StaticName="IO_Website_LastName" DisplayName="Apellidos" Group="IO Sitio Web"
+         Type="Text" MaxLength="60"/>
+  <Field ID="{FF0AB92D-6E65-4AD7-90B6-C0950FB969CF}" Name="IO_Website_Company" StaticName="IO_Website_Company" DisplayName="Empresa" Group="IO Sitio Web"
+         Type="Text" MaxLength="60"/>
+  <Field ID="{60F5AA79-5E53-41C4-AF45-E7C7EDB50FC0}" Name="IO_Website_Email" StaticName="IO_Website_Email" DisplayName="Email" Group="IO Sitio Web"
+         Type="Text" MaxLength="60"/>
+  <Field ID="{72F98E12-DEE0-4CF2-8ACE-E49761F7AB77}" Name="IO_Website_Phone" StaticName="IO_Website_Phone" DisplayName="Teléfono" Group="IO Sitio Web"
+         Type="Text" MaxLength="15"/>
+  <Field ID="{FE912C69-6848-432C-9D1D-C97823D7C0A8}" Name="IO_Website_Mobile" StaticName="IO_Website_Mobile" DisplayName="Celular" Group="IO Sitio Web"
+         Type="Text" MaxLength="15"/>
+  <Field ID="{8EDFFE67-C53E-4E77-94CE-A3DBD42A89AA}" Name="IO_Website_City" StaticName="IO_Website_City" DisplayName="Ciudad" Group="IO Sitio Web"
+         Type="Text" MaxLength="60"/>
+
+  <Field ID="{4D1871A5-5F00-4B22-B6F9-ADB0D8693D4E}" Name="IO_Website_Subject" StaticName="IO_Website_Subject" DisplayName="Asunto" Group="IO Sitio Web"
+         Type="Choice" >
+    <CHOICES>
+      <CHOICE>
+        Visita Comercial
+      </CHOICE>
+      <CHOICE>
+        Soporte
+      </CHOICE>
+      <CHOICE>
+        Mantenimiento
+      </CHOICE>
+      <CHOICE>
+        Capacitación
+      </CHOICE>
+      <CHOICE>
+        Consultoría
+      </CHOICE>
+      <CHOICE>
+        Otro
+      </CHOICE>
+    </CHOICES>
+  </Field>
+  <Field ID="{2C225A48-24DB-4477-8052-340C89ADBE73}" Name="IO_Website_OtherSubject" StaticName="IO_Website_OtherSubject" DisplayName="Otro" Group="IO Sitio Web"
+         Type="Text" MaxLength="200"/>
+</Elements>

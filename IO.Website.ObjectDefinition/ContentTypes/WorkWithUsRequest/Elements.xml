@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Document (0x0101) -->
+  <ContentType ID="0x010100C5994E7ADEE24C7AA7EE0E89AC60E74F"
+               Name="Solicitud de Trabaje con Nosotros"
+               Group="IO Sitio Web"
+               Description="Contiene los datos registrados por potenciales candidatos a ser empleados por IO, desde el portal de IO"
+               Inherits="TRUE"
+               Version="0">
+    <FieldRefs>
+      <FieldRef ID="{33C41ADD-6790-409F-9F55-F85F129F3E6F}" Name="IO_Website_Name"  Required="TRUE"/>
+      <FieldRef ID="{E5A4F8A2-9968-407D-A522-2EE5386D093A}" Name="IO_Website_LastName" Required="TRUE"/>      
+      <FieldRef ID="{60F5AA79-5E53-41C4-AF45-E7C7EDB50FC0}" Name="IO_Website_Email"  Required="TRUE"/>      
+    </FieldRefs>
+  </ContentType>
+</Elements>

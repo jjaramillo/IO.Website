@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Solicitudes de Trabaje con Nosotros"
+                OnQuickLaunch="FALSE"
+                TemplateType="101"
+                Url="WorkWithUsRequests"
+                FeatureId="c55a6219-4832-481f-b122-7e5dc47d2833"
+                Description="Contiene las solicitudes de trabaje con nosotros registradas en el sitio web de IO">
+  </ListInstance>
+</Elements>

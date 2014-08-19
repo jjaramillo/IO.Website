@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="2a5f0778-ba9f-4a2e-bbfc-1c2dea2eca94" solutionId="2a5f0778-ba9f-4a2e-bbfc-1c2dea2eca94" resetWebServer="false" sharePointProductVersion="15.0" name="IO.Website.Services" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <assemblies>
+    <projectOutputAssembly location="IO.Website.DAL.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\IO.Website.DAL\IO.Website.DAL.csproj" />
+    <customAssembly location="Jjaramillo.SP2013.Transactions.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\References\Jjaramillo.SP2013.Transactions.dll" />
+  </assemblies>
+  <projectItems>
+    <projectItemReference itemId="3a009529-6add-4a8c-9ebf-5d5b2626a928" />
+  </projectItems>
+</package>

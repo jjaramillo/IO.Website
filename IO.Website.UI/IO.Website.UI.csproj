@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AA93708D-43C0-4C5B-A9D0-BDE2986F24B7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IO.Website.UI</RootNamespace>
+    <AssemblyName>IO.Website.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetOfficeVersion>15.0</TargetOfficeVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{C1CDDADD-2546-481F-9697-4EA41081F2FC};{14822709-B5A1-4724-98CA-57A101D1B079};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <SandboxedSolution>False</SandboxedSolution>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Microsoft.SharePoint" />
+    <Reference Include="Microsoft.SharePoint.Client.ServerRuntime" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BrochureDownload\BrochureDownload.cs" />
+    <Compile Include="BrochureDownload\BrochureDownloadUserControl.ascx.cs">
+      <DependentUpon>BrochureDownloadUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BrochureDownload\BrochureDownloadUserControl.ascx.designer.cs">
+      <DependentUpon>BrochureDownloadUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ContactRequest\ContactRequest.cs" />
+    <Compile Include="ContactRequest\ContactRequestUserControl.ascx.cs">
+      <DependentUpon>ContactRequestUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactRequest\ContactRequestUserControl.ascx.designer.cs">
+      <DependentUpon>ContactRequestUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DemoRequest\DemoRequest.cs" />
+    <Compile Include="DemoRequest\DemoRequestUserControl.ascx.cs">
+      <DependentUpon>DemoRequestUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DemoRequest\DemoRequestUserControl.ascx.designer.cs">
+      <DependentUpon>DemoRequestUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WorkWithUsRequest\WorkWithUsRequest.cs" />
+    <Compile Include="WorkWithUsRequest\WorkWithUsRequestUserControl.ascx.cs">
+      <DependentUpon>WorkWithUsRequestUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WorkWithUsRequest\WorkWithUsRequestUserControl.ascx.designer.cs">
+      <DependentUpon>WorkWithUsRequestUserControl.ascx.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BrochureDownload\BrochureDownload.webpart" />
+    <None Include="BrochureDownload\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{b35e0783-76fa-4c81-853e-58c3a5f04428}</SharePointProjectItemId>
+    </None>
+    <None Include="ContactRequest\ContactRequest.webpart" />
+    <None Include="ContactRequest\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{d97efdb4-224e-4762-8a7c-147e0a9d0540}</SharePointProjectItemId>
+    </None>
+    <None Include="DemoRequest\DemoRequest.webpart" />
+    <None Include="DemoRequest\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{686c45ba-e1cd-4d0b-8d5a-a20a39f20ba1}</SharePointProjectItemId>
+    </None>
+    <None Include="Features\IOWebsiteWebparts\IOWebsiteWebparts.feature">
+      <FeatureId>{178205a5-926d-4138-b7e1-962c1fa89b3a}</FeatureId>
+    </None>
+    <None Include="INC\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{580a5188-0b2f-49d5-9066-efd81664653c}</SharePointProjectItemId>
+    </None>
+    <None Include="key.snk" />
+    <None Include="Package\Package.package">
+      <PackageId>{cfa8602d-a635-49ef-8df4-bcc5391a6433}</PackageId>
+    </None>
+    <None Include="Package\Package.Template.xml">
+      <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="WorkWithUsRequest\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{0cdf3725-ab89-41a0-9e51-651f7a3b3b67}</SharePointProjectItemId>
+    </None>
+    <None Include="WorkWithUsRequest\WorkWithUsRequest.webpart" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\IO.Website.DAL\IO.Website.DAL.csproj">
+      <Project>{5808f93c-d092-414d-8777-89ac963f836c}</Project>
+      <Name>IO.Website.DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BrochureDownload\BrochureDownloadUserControl.ascx" />
+    <Content Include="BrochureDownload\Elements.xml" />
+    <Content Include="ContactRequest\ContactRequestUserControl.ascx" />
+    <Content Include="ContactRequest\Elements.xml" />
+    <Content Include="DemoRequest\DemoRequestUserControl.ascx" />
+    <Content Include="DemoRequest\Elements.xml" />
+    <Content Include="Features\IOWebsiteWebparts\IOWebsiteWebparts.Template.xml">
+      <DependentUpon>IOWebsiteWebparts.feature</DependentUpon>
+    </Content>
+    <Content Include="INC\IO.Website\js\BrochureDownloadViewModel.js" />
+    <Content Include="INC\IO.Website\js\ContactRequestViewModel.js" />
+    <Content Include="INC\IO.Website\js\DemoRequestViewModel.js" />
+    <Content Include="INC\IO.Website\js\jquery-2.1.1.min.js" />
+    <Content Include="INC\IO.Website\js\knockout-3.2.0.js" />
+    <Content Include="INC\IO.Website\js\knockout.validation.js" />
+    <Content Include="INC\IO.Website\js\knockout.validation.min.js" />
+    <Content Include="INC\IO.Website\js\WorkWithUsRequestViewModel.js" />
+    <Content Include="WorkWithUsRequest\Elements.xml" />
+    <Content Include="WorkWithUsRequest\WorkWithUsRequestUserControl.ascx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(VSToolsPath)\SharePointTools\Microsoft.VisualStudio.SharePoint.targets" Condition="'$(VSToolsPath)' != ''" />
+</Project>

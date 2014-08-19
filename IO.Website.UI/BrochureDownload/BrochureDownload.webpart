@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="IO.Website.UI.BrochureDownload.BrochureDownload, $SharePoint.Project.AssemblyFullName$" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">Formulario de Descarga de Brochure</property>
+        <property name="Description" type="string">Elemento web de registro de datos al decargar el brochure corporativo de IO</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>

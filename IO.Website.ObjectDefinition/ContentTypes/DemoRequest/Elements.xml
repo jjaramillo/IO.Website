@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Item (0x01) -->
+  <ContentType ID="0x0100E79E6824C5B940E39253547BEC435777"
+               Name="Solicitud de Demo"
+               Group="IO Sitio Web"
+               Description="Datos registrados por un potencial cliente al realizar una solicitud de demo en el portal web de IO"
+               Inherits="TRUE"
+               Version="0">
+    <FieldRefs>
+      <FieldRef ID="{33C41ADD-6790-409F-9F55-F85F129F3E6F}" Name="IO_Website_Name"  Required="TRUE"/>
+      <FieldRef ID="{E5A4F8A2-9968-407D-A522-2EE5386D093A}" Name="IO_Website_LastName" Required="TRUE"/>
+      <FieldRef ID="{FF0AB92D-6E65-4AD7-90B6-C0950FB969CF}" Name="IO_Website_Company" Required="TRUE"/>
+      <FieldRef ID="{60F5AA79-5E53-41C4-AF45-E7C7EDB50FC0}" Name="IO_Website_Email"  Required="TRUE"/>
+      <FieldRef ID="{72F98E12-DEE0-4CF2-8ACE-E49761F7AB77}" Name="IO_Website_Phone" Required="TRUE"/>
+      <FieldRef ID="{FE912C69-6848-432C-9D1D-C97823D7C0A8}" Name="IO_Website_Mobile" Required="TRUE"/>
+      <FieldRef ID="{8EDFFE67-C53E-4E77-94CE-A3DBD42A89AA}" Name="IO_Website_City" Required="TRUE"/>
+    </FieldRefs>
+  </ContentType>
+</Elements>

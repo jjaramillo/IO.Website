@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Item (0x01) -->
+  <ContentType ID="0x01000888F12C3FBB4BB68DA82F8BC809F3BD"
+               Name="Solicitud de Descarga de Brochure"
+               Group="IO Sitio Web"
+               Description="Datos registrados al decargar el brochure corporativo de IO desde el sitio web de IO"
+               Inherits="TRUE"
+               Version="0">
+    <FieldRefs>
+      <FieldRef ID="{33C41ADD-6790-409F-9F55-F85F129F3E6F}" Name="IO_Website_Name"  Required="TRUE"/>
+      <FieldRef ID="{E5A4F8A2-9968-407D-A522-2EE5386D093A}" Name="IO_Website_LastName" Required="TRUE"/>
+      <FieldRef ID="{FF0AB92D-6E65-4AD7-90B6-C0950FB969CF}" Name="IO_Website_Company" Required="TRUE"/>
+      <FieldRef ID="{60F5AA79-5E53-41C4-AF45-E7C7EDB50FC0}" Name="IO_Website_Email"  Required="TRUE"/>
+    </FieldRefs>
+  </ContentType>
+</Elements>

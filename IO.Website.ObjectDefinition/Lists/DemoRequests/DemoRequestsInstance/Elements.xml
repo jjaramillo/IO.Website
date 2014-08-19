@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Solicitudes de Demo"
+                OnQuickLaunch="FALSE"
+                TemplateType="100"
+                Url="Lists/DemoRequests"
+                Description="Contiene las solicitudes de demo registradas desde el sitio web de IO">
+  </ListInstance>
+</Elements>

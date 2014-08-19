@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Descargas de Brochure"
+                OnQuickLaunch="FALSE"
+                TemplateType="100"
+                Url="Lists/BrochureDownloads"               
+                Description="Contiene los datos registrados al decargar el brochure de IO desde el sitio web">
+  </ListInstance>
+</Elements>

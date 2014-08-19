@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Solicitudes de Contacto"
+                OnQuickLaunch="FALSE"
+                TemplateType="100"
+                Url="Lists/ContactRequests"                
+                Description="Contiene las solicitudes de contacto registradas desde el sitio web de IO">
+  </ListInstance>
+</Elements>

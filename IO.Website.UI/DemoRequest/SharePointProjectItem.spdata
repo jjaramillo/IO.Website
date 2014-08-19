@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.VisualWebPart" DefaultFile="DemoRequestUserControl.ascx" SupportedTrustLevels="FullTrust" SupportedDeploymentScopes="Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="DemoRequest\" Type="ElementManifest" />
+    <ProjectItemFile Source="DemoRequest.webpart" Target="DemoRequest\" Type="ElementFile" />
+    <ProjectItemFile Source="DemoRequestUserControl.ascx" Target="CONTROLTEMPLATES\IO.Website.UI\DemoRequest\" Type="TemplateFile" />
+  </Files>
+  <SafeControls>
+    <SafeControl Name="SafeControlEntry1" Assembly="$SharePoint.Project.AssemblyFullName$" Namespace="IO.Website.UI.DemoRequest" TypeName="*" IsSafe="true" IsSafeAgainstScript="false" />
+  </SafeControls>
+</ProjectItem>

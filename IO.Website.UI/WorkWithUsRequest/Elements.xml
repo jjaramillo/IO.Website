@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/" >
+  <Module Name="WorkWithUsRequest" List="113" Url="_catalogs/wp">
+    <File Path="WorkWithUsRequest\WorkWithUsRequest.webpart" Url="IO.Website.UI_WorkWithUsRequest.webpart" Type="GhostableInLibrary" >
+      <Property Name="Group" Value="IO Sitio Web" />
+    </File>
+  </Module>
+</Elements>

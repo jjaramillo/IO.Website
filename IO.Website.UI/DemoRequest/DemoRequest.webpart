@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="IO.Website.UI.DemoRequest.DemoRequest, $SharePoint.Project.AssemblyFullName$" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">Formulario Solicitud de Demostracion</property>
+        <property name="Description" type="string">Elemento web de registro de datos de solicitud de demostracion de IO</property>
+      </properties>
+    </data>
+  </webPart>
+</webParts>
