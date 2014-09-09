@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <!-- Parent ContentType: Image (0x0101009148F5A04DDD49CBA7127AADA5FB792B00AADE34325A8B49CDA8BB4DB53328F214) -->
+  <ContentType ID="0x0101009148F5A04DDD49CBA7127AADA5FB792B00AADE34325A8B49CDA8BB4DB53328F21400D97225D101D5444D8CDBD6B572990C72"
+               Name="Slide de Productos"
+               Group="IO Sitio Web"
+               Description="Elemento desplegado en el carrousel de productos del portal de IO"
+               Inherits="TRUE"
+               Version="0">
+    <FieldRefs>
+      <FieldRef ID="{125CF66E-0923-4BBF-89EC-E08616EDAF4A}" Name="IO_Website_SliderDescription" Required="TRUE" />      
+      <FieldRef ID="{2E99652F-0E9C-4E3F-89A2-FF752EBEF2EF}" Name="IO_Website_SliderYoutubeLink" Required="TRUE" />  
+    </FieldRefs>
+  </ContentType>
+</Elements>

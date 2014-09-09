@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ProjectItem Type="Microsoft.VisualStudio.SharePoint.VisualWebPart" DefaultFile="ProductsSliderUserControl.ascx" SupportedTrustLevels="FullTrust" SupportedDeploymentScopes="Site" xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">
+  <Files>
+    <ProjectItemFile Source="Elements.xml" Target="ProductsSlider\" Type="ElementManifest" />
+    <ProjectItemFile Source="ProductsSlider.webpart" Target="ProductsSlider\" Type="ElementFile" />
+    <ProjectItemFile Source="ProductsSliderUserControl.ascx" Target="CONTROLTEMPLATES\IO.Website.UI\ProductsSlider\" Type="TemplateFile" />
+  </Files>
+  <SafeControls>
+    <SafeControl Name="SafeControlEntry1" Assembly="$SharePoint.Project.AssemblyFullName$" Namespace="IO.Website.UI.ProductsSlider" TypeName="*" IsSafe="true" IsSafeAgainstScript="false" />
+  </SafeControls>
+</ProjectItem>

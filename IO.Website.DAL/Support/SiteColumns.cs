@@ -17,6 +17,9 @@ namespace IO.Website.DAL.Support
         internal const string SUBJECT = "IO_Website_Subject";
         internal const string OTHER_SUBJECT = "IO_Website_OtherSubject";
 
+        internal const string DESCRIPTION = "IO_Website_SliderDescription";
+        internal const string LINK = "IO_Website_SliderLink";
+        internal const string YOUTUBE_LINK = "IO_Website_SliderYoutubeLink";
 
         internal List<string> ChoiceValues(string siteColumnStaticName, SPWeb web)
         {

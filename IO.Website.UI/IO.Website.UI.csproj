@@ -77,6 +77,29 @@
     <Compile Include="DemoRequest\DemoRequestUserControl.ascx.designer.cs">
       <DependentUpon>DemoRequestUserControl.ascx.cs</DependentUpon>
     </Compile>
+    <Compile Include="HomeSlider\HomeSlider.cs" />
+    <Compile Include="HomeSlider\HomeSliderUserControl.ascx.cs">
+      <DependentUpon>HomeSliderUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeSlider\HomeSliderUserControl.ascx.designer.cs">
+      <DependentUpon>HomeSliderUserControl.ascx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Layouts\IO.Website\ViewVideo.aspx.cs">
+      <DependentUpon>ViewVideo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Layouts\IO.Website\ViewVideo.aspx.designer.cs">
+      <DependentUpon>ViewVideo.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductsSlider\ProductsSlider.cs" />
+    <Compile Include="ProductsSlider\ProductsSliderUserControl.ascx.cs">
+      <DependentUpon>ProductsSliderUserControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductsSlider\ProductsSliderUserControl.ascx.designer.cs">
+      <DependentUpon>ProductsSliderUserControl.ascx.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WorkWithUsRequest\WorkWithUsRequest.cs" />
     <Compile Include="WorkWithUsRequest\WorkWithUsRequestUserControl.ascx.cs">
@@ -103,15 +126,26 @@
     <None Include="Features\IOWebsiteWebparts\IOWebsiteWebparts.feature">
       <FeatureId>{178205a5-926d-4138-b7e1-962c1fa89b3a}</FeatureId>
     </None>
+    <None Include="HomeSlider\HomeSlider.webpart" />
+    <None Include="HomeSlider\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{465af50f-fae9-495d-9287-bcadd6896ba9}</SharePointProjectItemId>
+    </None>
     <None Include="INC\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{580a5188-0b2f-49d5-9066-efd81664653c}</SharePointProjectItemId>
     </None>
     <None Include="key.snk" />
+    <None Include="Layouts\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{1f0f6501-ce75-4ec6-862a-43cbd6187380}</SharePointProjectItemId>
+    </None>
     <None Include="Package\Package.package">
       <PackageId>{cfa8602d-a635-49ef-8df4-bcc5391a6433}</PackageId>
     </None>
     <None Include="Package\Package.Template.xml">
       <DependentUpon>Package.package</DependentUpon>
+    </None>
+    <None Include="ProductsSlider\ProductsSlider.webpart" />
+    <None Include="ProductsSlider\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{de2ff1d8-6753-41ed-95a2-2ea894b59f56}</SharePointProjectItemId>
     </None>
     <None Include="WorkWithUsRequest\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{0cdf3725-ab89-41a0-9e51-651f7a3b3b67}</SharePointProjectItemId>
@@ -134,14 +168,21 @@
     <Content Include="Features\IOWebsiteWebparts\IOWebsiteWebparts.Template.xml">
       <DependentUpon>IOWebsiteWebparts.feature</DependentUpon>
     </Content>
+    <Content Include="HomeSlider\Elements.xml" />
+    <Content Include="HomeSlider\HomeSliderUserControl.ascx" />
     <Content Include="INC\IO.Website\js\BrochureDownloadViewModel.js" />
     <Content Include="INC\IO.Website\js\ContactRequestViewModel.js" />
     <Content Include="INC\IO.Website\js\DemoRequestViewModel.js" />
+    <Content Include="INC\IO.Website\js\HomeSliderViewModel.js" />
     <Content Include="INC\IO.Website\js\jquery-2.1.1.min.js" />
     <Content Include="INC\IO.Website\js\knockout-3.2.0.js" />
     <Content Include="INC\IO.Website\js\knockout.validation.js" />
     <Content Include="INC\IO.Website\js\knockout.validation.min.js" />
+    <Content Include="INC\IO.Website\js\ProductsSliderViewModel.js" />
     <Content Include="INC\IO.Website\js\WorkWithUsRequestViewModel.js" />
+    <Content Include="Layouts\IO.Website\ViewVideo.aspx" />
+    <Content Include="ProductsSlider\Elements.xml" />
+    <Content Include="ProductsSlider\ProductsSliderUserControl.ascx" />
     <Content Include="WorkWithUsRequest\Elements.xml" />
     <Content Include="WorkWithUsRequest\WorkWithUsRequestUserControl.ascx" />
   </ItemGroup>

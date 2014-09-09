@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  
+  <Field ID="{125CF66E-0923-4BBF-89EC-E08616EDAF4A}" Name="IO_Website_SliderDescription" StaticName="IO_Website_SliderDescription"  DisplayName="Descripción" Type="HTML" RichText="TRUE" RichTextMode="ThemeHtml"
+       Group="IO Sitio Web"/>
+  <Field ID="{7EEC1BC7-4C8D-465C-AED7-449DA16E765F}" Name="IO_Website_SliderLink" StaticName="IO_Website_SliderLink" DisplayName="Vinculo" Type="URL" Format="Hyperlink"
+         Group="IO Sitio Web"/>
+  <Field ID="{2E99652F-0E9C-4E3F-89A2-FF752EBEF2EF}" Name="IO_Website_SliderYoutubeLink" StaticName="IO_Website_SliderYoutubeLink" DisplayName="Vinculo Youtube" Type="URL" Format="Hyperlink"
+         Group="IO Sitio Web"/>
+</Elements>

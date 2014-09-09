@@ -8,5 +8,10 @@ namespace IO.Website.DAL.Support
         {
             return item[siteColumnStaticName] == null ? defaulValue : item[siteColumnStaticName].ToString();
         }
+
+        internal static SPFieldUrlValue GetSiteColumnUrlValue(this SPListItem item, string siteColumnStaticName)
+        {
+            return item[siteColumnStaticName] == null ? null : new SPFieldUrlValue( item[siteColumnStaticName].ToString());
+        }
     }
 }

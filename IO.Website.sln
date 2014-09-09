@@ -16,6 +16,22 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "References", "References", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IO.Website.DAL", "IO.Website.DAL\IO.Website.DAL.csproj", "{5808F93C-D092-414D-8777-89AC963F836C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IO.Website.ObjectDefinition.Sliders", "IO.Website.ObjectDefinition.Sliders\IO.Website.ObjectDefinition.Sliders.csproj", "{D6491CB5-D206-4A12-A799-1EE687CDCBAB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Powershell", "Powershell", "{24BB69A3-A3F7-4D4E-94BF-5E6CD7638AA2}"
+	ProjectSection(SolutionItems) = preProject
+		Powershell\Installer.ps1 = Powershell\Installer.ps1
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Packages", "Packages", "{3A005E06-6F78-45DB-A37C-BD3EA9EC0D1F}"
+	ProjectSection(SolutionItems) = preProject
+		Powershell\Packages\IO.Website.ObjectDefinition.Sliders.wsp = Powershell\Packages\IO.Website.ObjectDefinition.Sliders.wsp
+		Powershell\Packages\IO.Website.ObjectDefinition.wsp = Powershell\Packages\IO.Website.ObjectDefinition.wsp
+		Powershell\Packages\IO.Website.Services.wsp = Powershell\Packages\IO.Website.Services.wsp
+		Powershell\Packages\IO.Website.UI.wsp = Powershell\Packages\IO.Website.UI.wsp
+		Powershell\Packages\RioLinx.SharePoint.Responsive.Server.wsp = Powershell\Packages\RioLinx.SharePoint.Responsive.Server.wsp
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,8 +60,17 @@ Global
 		{5808F93C-D092-414D-8777-89AC963F836C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5808F93C-D092-414D-8777-89AC963F836C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5808F93C-D092-414D-8777-89AC963F836C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6491CB5-D206-4A12-A799-1EE687CDCBAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6491CB5-D206-4A12-A799-1EE687CDCBAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6491CB5-D206-4A12-A799-1EE687CDCBAB}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{D6491CB5-D206-4A12-A799-1EE687CDCBAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6491CB5-D206-4A12-A799-1EE687CDCBAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6491CB5-D206-4A12-A799-1EE687CDCBAB}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3A005E06-6F78-45DB-A37C-BD3EA9EC0D1F} = {24BB69A3-A3F7-4D4E-94BF-5E6CD7638AA2}
 	EndGlobalSection
 EndGlobal

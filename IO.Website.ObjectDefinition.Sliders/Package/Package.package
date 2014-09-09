@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="6ae8c4dd-64fb-4735-be6b-6569129aeaba" solutionId="6ae8c4dd-64fb-4735-be6b-6569129aeaba" resetWebServer="false" sharePointProductVersion="15.0" name="IO.Website.ObjectDefinition.Sliders" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
+  <features>
+    <featureReference itemId="0ecf3dda-6060-4231-b01a-49042f535ac8" />
+    <featureReference itemId="2255315d-27a6-4afd-ab73-41e164b1169a" />
+  </features>
+</package>

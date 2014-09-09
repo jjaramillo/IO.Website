@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+    <!-- Do not change the value of the Name attribute below. If it does not match the folder name of the List project item, an error will occur when the project is run. -->
+    <ListTemplate
+        Name="HomeSlides"
+        FeatureId="8a48242f-d18e-4207-a723-16c73d28ec65"
+        Type="10060"        
+        BaseType="1"
+        OnQuickLaunch="TRUE"
+        SecurityBits="11"
+        Sequence="110"
+        DisplayName="Biblioteca de Imagenes de Carrousel Inicio"
+        Description="Plantilla de biblioteca contenedora de los elementos del carrousel de imagenes del home"
+        Image="/_layouts/15/images/itdl.png"
+        DocumentTemplate="121"/>
+</Elements>

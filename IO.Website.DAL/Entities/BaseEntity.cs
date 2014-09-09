@@ -24,12 +24,14 @@ namespace IO.Website.DAL.Entities
         public Nullable<DateTime> CreationDate
         {
             get { return _CreationDate; }
+            set { _CreationDate = value; }
         }
 
         [DataMember]
         public Nullable<DateTime> ModifiedDate
-        {
+        {            
             get { return _ModifiedDate; }
+            set { _ModifiedDate = value; }
         }
         
         public BaseEntity(SPListItem item)

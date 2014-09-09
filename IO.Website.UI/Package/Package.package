@@ -8,5 +8,6 @@
   </features>
   <projectItems>
     <projectItemReference itemId="580a5188-0b2f-49d5-9066-efd81664653c" />
+    <projectItemReference itemId="1f0f6501-ce75-4ec6-862a-43cbd6187380" />
   </projectItems>
 </package>

@@ -7,8 +7,7 @@
 <%@ Register TagPrefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ContactRequestUserControl.ascx.cs" Inherits="IO.Website.UI.ContactRequest.ContactRequestUserControl" %>
 <asp:ScriptManagerProxy runat="server" ID="scptmgrpx">
-    <Scripts>
-        <asp:ScriptReference Path="/_layouts/15/INC/IO.Website/js/jquery-2.1.1.min.js" />
+    <Scripts>        
         <asp:ScriptReference Path="/_layouts/15/INC/IO.Website/js/knockout-3.2.0.js" />
         <asp:ScriptReference Path="/_layouts/15/INC/IO.Website/js/knockout.validation.js" />
         <asp:ScriptReference Path="/_layouts/15/INC/IO.Website/js/ContactRequestViewModel.js" />
