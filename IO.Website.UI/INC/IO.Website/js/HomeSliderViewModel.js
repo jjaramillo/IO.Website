@@ -7,7 +7,7 @@ var HomeSliderViewModel = function () {
     var _self = this;
     var _siteCollectionUrl = _spPageContextInfo.webAbsoluteUrl;
 
-    this.Pictures = ko.observableArray([]);    
+    this.Pictures = ko.observableArray([]);
 
     function OnError(jqXHR, status, errorMessage) {
         _statusID = SP.UI.Status.addStatus('Error', errorMessage, true);
@@ -19,17 +19,18 @@ var HomeSliderViewModel = function () {
         var currentPicture;
         for (var index = 0; index < result.length; index++) {
             currentPicture = result[index]
+            currentPicture.Index = ko.observable(index);
             currentPicture.ImageUrlBackgroundStyle = ko.computed(function () { return "url('" + currentPicture.ImageUrl + "')" });
+            currentPicture.Class = ko.computed(function () { if (this.Index() == 0) { return 'item active' } else { return 'item'; } });
             _self.Pictures.push(currentPicture);
-        }        
+        }
     }
 
     jQuery.ajax(
         {
             cache: false,
             contentType: "application/json; charset=utf-8",
-            dataType: 'json',
-            data: { contextUrl: self.contextUrl() },
+            dataType: 'json',            
             type: 'GET',
             url: _spPageContextInfo.siteAbsoluteUrl + '/_vti_bin/IO.WebSite.API/SliderService.svc/Home?siteCollectionUrl=' + _siteCollectionUrl,
             success: OnSuccess,

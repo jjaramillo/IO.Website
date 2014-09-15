@@ -15,11 +15,11 @@
 <div id="home_slider_container" class="carousel slide" data-ride="carousel" runat="server">
     <!-- Indicators -->
     <ol class="carousel-indicators" data-bind="foreach: Pictures">
-        <li data-target='#<%= home_slider_container.ClientID %>' data-bind="attr: { 'data-slide-to': ID }"></li>
+        <li data-target='#<%= home_slider_container.ClientID %>' data-bind="attr: { 'data-slide-to': Index }"></li>
     </ol>
     <!-- Wrapper for slides -->
     <div class="carousel-inner" data-bind="foreach: Pictures">
-        <div class="item active"data-bind="style: { 'background': ImageUrlBackgroundStyle }">
+        <div data-bind="style: { 'background': ImageUrlBackgroundStyle }, class: Class">
             <div class="carousel-caption">
                 <h1 data-bind="text: Title"></h1>
                 <span class="descripcion">
