@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
-  
+  <Field ID="{0D33B7CD-4D92-4988-B120-89540EAA66C6}" Name="IO_Website_BackgroundColor" StaticName="IO_Website_BackgroundColor" DisplayName="Color de Fondo" Type="Text" MaxLength="7"
+       Group="IO Sitio Web" Required="TRUE"/>  
   <Field ID="{125CF66E-0923-4BBF-89EC-E08616EDAF4A}" Name="IO_Website_SliderDescription" StaticName="IO_Website_SliderDescription"  DisplayName="Descripción" Type="HTML" RichText="TRUE" RichTextMode="ThemeHtml"
        Group="IO Sitio Web"/>
   <Field ID="{7EEC1BC7-4C8D-465C-AED7-449DA16E765F}" Name="IO_Website_SliderLink" StaticName="IO_Website_SliderLink" DisplayName="Vinculo" Type="URL" Format="Hyperlink"

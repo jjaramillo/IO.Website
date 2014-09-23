@@ -12,6 +12,7 @@ namespace IO.Website.DAL.Entities
         private string _LinkUrl;
         private string _LinkTitle;
         private string _Title;
+        private string _Color;
 
         [DataMember]
         public string Title
@@ -48,6 +49,13 @@ namespace IO.Website.DAL.Entities
             set { _LinkTitle = value; }
         }
 
+        [DataMember]
+        public string Color 
+        {
+            get { return _Color; }
+            set { _Color = value; }
+        }
+
         public HomeSlide(SPListItem item)
             : base(item)
         {            
@@ -57,6 +65,7 @@ namespace IO.Website.DAL.Entities
             _LinkUrl = spLink == null ? string.Empty : spLink.Url;
             _LinkTitle = spLink == null ? string.Empty : spLink.Description;
             _ImageUrl = item.File.ServerRelativeUrl;
+            _Color = item.GetSiteColumnStringValue(SiteColumns.COLOR, string.Empty);
         }
     }
 }

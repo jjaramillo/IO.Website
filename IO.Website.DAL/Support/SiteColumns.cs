@@ -19,6 +19,7 @@ namespace IO.Website.DAL.Support
 
         internal const string DESCRIPTION = "IO_Website_SliderDescription";
         internal const string LINK = "IO_Website_SliderLink";
+        internal const string COLOR = "IO_Website_BackgroundColor";
         internal const string YOUTUBE_LINK = "IO_Website_SliderYoutubeLink";
 
         internal List<string> ChoiceValues(string siteColumnStaticName, SPWeb web)
@@ -33,5 +34,7 @@ namespace IO.Website.DAL.Support
 
             return values;
         }
+
+        
     }
 }

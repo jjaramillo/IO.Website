@@ -10,6 +10,7 @@
     <FieldRefs>
       <FieldRef ID="{125CF66E-0923-4BBF-89EC-E08616EDAF4A}" Name="IO_Website_SliderDescription" Required="TRUE" />
       <FieldRef ID="{7EEC1BC7-4C8D-465C-AED7-449DA16E765F}" Name="IO_Website_SliderLink" Required="TRUE" />
+      <FieldRef ID="{0D33B7CD-4D92-4988-B120-89540EAA66C6}" Name="IO_Website_BackgroundColor" Required="TRUE"/>
     </FieldRefs>
   </ContentType>
 </Elements>

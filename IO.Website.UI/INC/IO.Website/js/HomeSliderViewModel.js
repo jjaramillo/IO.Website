@@ -20,8 +20,7 @@ var HomeSliderViewModel = function () {
         for (var index = 0; index < result.length; index++) {
             currentPicture = result[index]
             currentPicture.Index = ko.observable(index);
-            currentPicture.ImageUrlBackgroundStyle = ko.computed(function () { return "url('" + currentPicture.ImageUrl + "')" });
-            currentPicture.Class = ko.computed(function () { if (this.Index() == 0) { return 'item active' } else { return 'item'; } });
+            currentPicture.Class = ko.computed(function () { if (currentPicture.Index() == 0) { return 'item active' } else { return 'item'; } });
             _self.Pictures.push(currentPicture);
         }
     }
@@ -30,7 +29,7 @@ var HomeSliderViewModel = function () {
         {
             cache: false,
             contentType: "application/json; charset=utf-8",
-            dataType: 'json',            
+            dataType: 'json',
             type: 'GET',
             url: _spPageContextInfo.siteAbsoluteUrl + '/_vti_bin/IO.WebSite.API/SliderService.svc/Home?siteCollectionUrl=' + _siteCollectionUrl,
             success: OnSuccess,

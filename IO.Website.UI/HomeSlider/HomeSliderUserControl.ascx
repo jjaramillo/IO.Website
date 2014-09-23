@@ -19,12 +19,19 @@
     </ol>
     <!-- Wrapper for slides -->
     <div class="carousel-inner" data-bind="foreach: Pictures">
-        <div data-bind="style: { 'background': ImageUrlBackgroundStyle }, class: Class">
-            <div class="carousel-caption">
-                <h1 data-bind="text: Title"></h1>
-                <span class="descripcion">
-                    <span class="hidden-xs" data-bind="html:Description"></span><br />
-                    <a data-bind="attr: { 'href': LinkUrl }">Más</a></span>
+        <div data-bind="style: { 'background': Color }, css: Class">
+            <div class="container">
+                <div class="carousel-caption">
+                    <div class="col-xs-12 col-md-12 col-sm-6 col-lg-6 imagenSlider">
+                        <img data-bind="attr: { 'src': ImageUrl, 'alt': LinkTitle, 'title': LinkTitle }"/>
+                    </div>
+                    <div class="col-xs-12 col-md-12 col-sm-6 col-lg-6">
+                        <span class="descripcion">
+                            <h1 data-bind="text: Title"></h1>
+                            <span class="hidden-xs" data-bind="html: Description"></span><br />
+                            <a data-bind="attr: { 'href': LinkUrl }">Más</a></span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
