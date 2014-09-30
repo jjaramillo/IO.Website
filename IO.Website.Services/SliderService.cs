@@ -33,8 +33,8 @@ namespace IO.Website.Services
             return foundElements;
         }
 
-        [WebInvoke(Method = "GET", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, UriTemplate = "Products?siteCollectionUrl={siteCollectionUrl}", BodyStyle = WebMessageBodyStyle.Wrapped)]
-        public List<ProductSlide> GetProductSlides(string siteCollectionUrl)
+        [WebInvoke(Method = "GET", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, UriTemplate = "Products/Poxta?siteCollectionUrl={siteCollectionUrl}", BodyStyle = WebMessageBodyStyle.Wrapped)]
+        public List<ProductSlide> GetPoxtaProductSlides(string siteCollectionUrl)
         {
             List<ProductSlide> foundElements = new List<ProductSlide>();
             SPSecurity.RunWithElevatedPrivileges(delegate()
@@ -43,7 +43,27 @@ namespace IO.Website.Services
                 {
                     using (SPWeb web = site.OpenWeb())
                     {
-                        SPList targetList = web.GetList(string.Format("{0}/{1}", web.Url, ListUrls.PRODUCT_SLIDES));
+                        SPList targetList = web.GetList(string.Format("{0}/{1}", web.Url, ListUrls.POXTA_PRODUCT_SLIDES));
+                        SPListItemCollection elements = targetList.Items;
+                        foundElements = (from SPListItem item in elements
+                                         select new ProductSlide(item)).ToList();
+                    }
+                }
+            });
+            return foundElements;
+        }
+
+        [WebInvoke(Method = "GET", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, UriTemplate = "Products/Memex?siteCollectionUrl={siteCollectionUrl}", BodyStyle = WebMessageBodyStyle.Wrapped)]
+        public List<ProductSlide> GetMemexProductSlides(string siteCollectionUrl)
+        {
+            List<ProductSlide> foundElements = new List<ProductSlide>();
+            SPSecurity.RunWithElevatedPrivileges(delegate()
+            {
+                using (SPSite site = new SPSite(siteCollectionUrl))
+                {
+                    using (SPWeb web = site.OpenWeb())
+                    {
+                        SPList targetList = web.GetList(string.Format("{0}/{1}", web.Url, ListUrls.MEMEX_PRODUCT_SLIDES));
                         SPListItemCollection elements = targetList.Items;
                         foundElements = (from SPListItem item in elements
                                          select new ProductSlide(item)).ToList();

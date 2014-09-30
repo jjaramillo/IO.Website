@@ -31,7 +31,7 @@ var HomeSliderViewModel = function () {
             contentType: "application/json; charset=utf-8",
             dataType: 'json',
             type: 'GET',
-            url: _spPageContextInfo.siteAbsoluteUrl + '/_vti_bin/IO.WebSite.API/SliderService.svc/Home?siteCollectionUrl=' + _siteCollectionUrl,
+            url: _spPageContextInfo.webAbsoluteUrl + '/_vti_bin/IO.WebSite.API/SliderService.svc/Home?siteCollectionUrl=' + _siteCollectionUrl,
             success: OnSuccess,
             error: OnError
         });

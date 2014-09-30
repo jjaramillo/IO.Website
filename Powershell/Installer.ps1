@@ -26,3 +26,7 @@ $portal.Update()
 Write-Host -f Green "Instalando capacidades de responsiveness..."
 
 Add-SPUserSolution -LiteralPath $ScriptPath"Packages\RioLinx.SharePoint.Responsive.Server.wsp" -Site $portalUrl
+
+Write-Host -f Green "Restaurando BackUp de produccion..."
+
+Import-SPWeb -Identity $portalUrl -Path $ScriptPath"dump/io.dmp" -ActivateSolutions -Force -UpdateVersions Overwrite

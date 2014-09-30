@@ -10,6 +10,8 @@ namespace IO.Website.Services.Contracts
         [OperationContract]
         List<HomeSlide> GetHomeSlides(string siteCollectionUrl);
         [OperationContract]
-        List<ProductSlide> GetProductSlides(string siteCollectionUrl);
+        List<ProductSlide> GetPoxtaProductSlides(string siteCollectionUrl);
+        [OperationContract]
+        List<ProductSlide> GetMemexProductSlides(string siteCollectionUrl);
     }
 }

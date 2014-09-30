@@ -20,9 +20,15 @@ namespace IO.Website.UI.ProductsSlider
         private void RegisterViewModel()
         {
             string viewModelJavascript = string.Format(
-                    @"var productSliderViewModel_{0} = new ProductSliderViewModel(); ko.applyBindings(productSliderViewModel_{0}, document.getElementById('{0}'));"
-                    , products_container.ClientID);
+                    @"var productSliderViewModel_{0} = new ProductSliderViewModel('{1}'); ko.applyBindings(productSliderViewModel_{0}, document.getElementById('{0}'));"
+                    , products_container.ClientID, ProductSliderType);
             ScriptManager.RegisterStartupScript(this, typeof(ProductsSliderUserControl), "ProductSliderViewModel", viewModelJavascript, true);
+        }
+
+        public ProductSliderType ProductSliderType
+        {
+            get { return ViewState["ProductSliderType"] == null ? ProductSliderType.Ninguno : (ProductSliderType)ViewState["ProductSliderType"]; }
+            set { ViewState["ProductSliderType"] = value; }
         }
     }
 }

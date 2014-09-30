@@ -12,37 +12,38 @@
         <asp:ScriptReference Path="/_layouts/15/INC/IO.Website/js/ProductsSliderViewModel.js" />
     </Scripts>
 </asp:ScriptManagerProxy>
-<div id="products_container" class="carousel slide" data-ride="carousel" runat="server">
-
-    <!-- Indicators -->
-
-    <ol class="carousel-indicators" data-bind="foreach: Products">
-        <li data-target='#<%= products_container.ClientID %>' data-bind="attr: { 'data-slide-to': ID }"></li>        
+<div class="caractProductos carrusel" id="products_container" data-ride="carousel" runat="server">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators" data-bind="foreach: Products">
+        <li data-target='#<%= products_container.ClientID %>' data-bind="attr: { 'data-slide-to': Index }, css: IndicatorClass"></li>
     </ol>
-
-    <!-- Wrapper for slides -->
-
-    <div class="carousel-inner" data-bind="foreach: Products">
-        <div class="item">
-            <div class="itemProducto">
-                <div class="imagenCaract">
-                    <img style="border: 0px solid;" data-bind="attr: { src: ImageUrl, alt: Title }" />
-                </div>
-                <div class="textCaract">
-                    <h2 data-bind="text: Title"></h2>
-                    <p><span data-bind="html: Description"></span>
-                    <br />
-                    <a data-bind="click: OpenVideo">Mas info</a></p>
-                </div>
+        <!-- Wrapper for slides -->
+        <div class="container">
+            <div class="carousel-inner" data-bind="foreach: Products">
+                <div data-bind="css: Class, foreach: Childs">
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 itemProducto">
+                        <div class="imagenCaract hidden-xs hidden-sm">
+                            <img style="border: 0px solid;" data-bind="attr: { src: ImageUrl, alt: Title, title: Title }" />
+                        </div>
+                        <div class="tituloCarruselPr">
+                            <p><span class="ms-rteStyle-H2" data-bind="text: Title"></span></p>
+                        </div>
+                        <div class="textCaract hidden-xs hidden-sm" data-bind="html: Description"></div>
+                        <div class="linkCarruselPr">
+                            <p><a data-bind="click: OpenVideo">Más info</a></p>
+                        </div>
+                    </div>
+                </div>                
             </div>
         </div>
         <!-- Controls -->
+        <a class="left carousel-control hidden-xs hidden-sm" href='#<%= products_container.ClientID %>' role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control hidden-xs hidden-sm" href='#<%= products_container.ClientID %>' role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
     </div>
-    <a class="left carousel-control" href='#<%= products_container.ClientID %>' role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left"></span>
-    </a>
-    <a class="right carousel-control" href='#<%= products_container.ClientID %>' role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right"></span>
-    </a>
 </div>
 

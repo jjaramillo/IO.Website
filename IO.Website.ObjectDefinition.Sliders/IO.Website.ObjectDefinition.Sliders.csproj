@@ -70,7 +70,10 @@
     <None Include="Lists\HomeSlides\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{80053abc-f7d0-492b-93f1-984601a72185}</SharePointProjectItemId>
     </None>
-    <None Include="Lists\ProductSlides\ProductSlidesInstance\SharePointProjectItem.spdata">
+    <None Include="Lists\ProductSlides\MemexProductSlidesInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{34a013cd-f5ad-4e6b-8657-e76fa728f21d}</SharePointProjectItemId>
+    </None>
+    <None Include="Lists\ProductSlides\PoxtaProductSlidesInstance\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{ae748f40-52bd-4aed-90ca-0b522bbb5722}</SharePointProjectItemId>
     </None>
     <None Include="Lists\ProductSlides\SharePointProjectItem.spdata">
@@ -109,7 +112,8 @@
     <Content Include="Lists\ProductSlides\EditDlg.htm" />
     <Content Include="Lists\ProductSlides\Elements.xml" />
     <Content Include="Lists\ProductSlides\FileDlg.htm" />
-    <Content Include="Lists\ProductSlides\ProductSlidesInstance\Elements.xml" />
+    <Content Include="Lists\ProductSlides\MemexProductSlidesInstance\Elements.xml" />
+    <Content Include="Lists\ProductSlides\PoxtaProductSlidesInstance\Elements.xml" />
     <Content Include="Lists\ProductSlides\Repair.aspx" />
     <Content Include="Lists\ProductSlides\Schema.xml" />
     <Content Include="Lists\ProductSlides\Upload.aspx" />

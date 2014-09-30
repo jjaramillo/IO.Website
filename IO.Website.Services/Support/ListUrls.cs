@@ -8,6 +8,7 @@ namespace IO.Website.Services.Support
         internal const string BROCHURE_DOWNLOADS_URL = "Lists/BrochureDownloads";
         internal const string WORK_WITH_US_REQUESTS_URL = "WorkWithUsRequests";
         internal const string HOME_SLIDES = "HomeSlides";
-        internal const string PRODUCT_SLIDES = "ProductSlides";
+        internal const string MEMEX_PRODUCT_SLIDES = "MemexProductSlides";
+        internal const string POXTA_PRODUCT_SLIDES = "PoxtaProductSlides";
     }
 }

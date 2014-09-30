@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <ListInstance Title="Carrousel de Productos Poxta"
+                OnQuickLaunch="FALSE"
+                TemplateType="10061"
+                FeatureId="8a48242f-d18e-4207-a723-16c73d28ec65"
+                Url="PoxtaProductSlides"
+                Description="Biblioteca contenedora de los elementos del carrousel de imagenes de producto POXTA">
+  </ListInstance>
+</Elements>
