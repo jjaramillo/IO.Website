@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Elements xmlns="http://schemas.microsoft.com/sharepoint/">
+  <CustomActionGroup Id="{8EF700A0-1A00-4F83-9115-B1D02044FC9B}" Title="Configuración de Sitio Web IO" Location="Microsoft.SharePoint.SiteSettings"
+                     Description="Administración características usadas en el Sitio Web de IO"  Sequence="1" RequiredAdmin="Delegated"/>
+  <CustomAction GroupId="{8EF700A0-1A00-4F83-9115-B1D02044FC9B}" Id="{11115378-F600-497A-BCF1-1B2B98E9F1FF}" Title="Administración de Envíos de Correo Electrónico"
+                Location="Microsoft.SharePoint.SiteSettings" Sequence="1">
+    <UrlAction Url="_layouts/15/IO.Website/MailerConfig.aspx"/>
+  </CustomAction>
+</Elements>

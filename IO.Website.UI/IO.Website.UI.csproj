@@ -85,13 +85,20 @@
     <Compile Include="HomeSlider\HomeSliderUserControl.ascx.designer.cs">
       <DependentUpon>HomeSliderUserControl.ascx.cs</DependentUpon>
     </Compile>
-    <Compile Include="Layouts\IO.Website\ViewVideo.aspx.cs">
-      <DependentUpon>ViewVideo.aspx</DependentUpon>
+    <Compile Include="Layouts\IO.Website\MailerConfig.aspx.cs">
+      <DependentUpon>MailerConfig.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Layouts\IO.Website\ViewVideo.aspx.designer.cs">
-      <DependentUpon>ViewVideo.aspx.cs</DependentUpon>
+    <Compile Include="Layouts\IO.Website\MailerConfig.aspx.designer.cs">
+      <DependentUpon>MailerConfig.aspx.cs</DependentUpon>
     </Compile>
+    <Compile Include="MVP\BasePresenter.cs" />
+    <Compile Include="MVP\ExtendedLayoutsPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MVP\IView.cs" />
+    <Compile Include="MVP\MailerConfig\IMailerConfigView.cs" />
+    <Compile Include="MVP\MailerConfig\MailerConfigPresenter.cs" />
     <Compile Include="ProductsSlider\ProductsSlider.cs" />
     <Compile Include="ProductsSlider\ProductsSliderUserControl.ascx.cs">
       <DependentUpon>ProductsSliderUserControl.ascx</DependentUpon>
@@ -118,6 +125,9 @@
     <None Include="ContactRequest\ContactRequest.webpart" />
     <None Include="ContactRequest\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{d97efdb4-224e-4762-8a7c-147e0a9d0540}</SharePointProjectItemId>
+    </None>
+    <None Include="Custom Actions\SiteSettings\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{443bb53b-1f32-4349-b420-093ec9d77d54}</SharePointProjectItemId>
     </None>
     <None Include="DemoRequest\DemoRequest.webpart" />
     <None Include="DemoRequest\SharePointProjectItem.spdata">
@@ -163,6 +173,7 @@
     <Content Include="BrochureDownload\Elements.xml" />
     <Content Include="ContactRequest\ContactRequestUserControl.ascx" />
     <Content Include="ContactRequest\Elements.xml" />
+    <Content Include="Custom Actions\SiteSettings\Elements.xml" />
     <Content Include="DemoRequest\DemoRequestUserControl.ascx" />
     <Content Include="DemoRequest\Elements.xml" />
     <Content Include="Features\IOWebsiteWebparts\IOWebsiteWebparts.Template.xml">
@@ -180,7 +191,7 @@
     <Content Include="INC\IO.Website\js\knockout.validation.min.js" />
     <Content Include="INC\IO.Website\js\ProductsSliderViewModel.js" />
     <Content Include="INC\IO.Website\js\WorkWithUsRequestViewModel.js" />
-    <Content Include="Layouts\IO.Website\ViewVideo.aspx" />
+    <Content Include="Layouts\IO.Website\MailerConfig.aspx" />
     <Content Include="ProductsSlider\Elements.xml" />
     <Content Include="ProductsSlider\ProductsSliderUserControl.ascx" />
     <Content Include="WorkWithUsRequest\Elements.xml" />

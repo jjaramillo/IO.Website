@@ -58,6 +58,7 @@
     <Compile Include="Entities\ContactRequest.cs" />
     <Compile Include="Entities\DemoRequest.cs" />
     <Compile Include="Entities\HomeSlide.cs" />
+    <Compile Include="Entities\MailConfigEntity.cs" />
     <Compile Include="Entities\ProductSlide.cs" />
     <Compile Include="Entities\WorkWithUs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
