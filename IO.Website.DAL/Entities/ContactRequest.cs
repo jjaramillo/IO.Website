@@ -3,6 +3,9 @@ using Jjaramillo.SP2013.Transactions.Commands.ListItem;
 using Microsoft.SharePoint;
 using System;
 using System.Runtime.Serialization;
+using IO.Website.Support;
+using Microsoft.SharePoint.Administration;
+using System.Collections.Generic;
 
 namespace IO.Website.DAL.Entities
 {
@@ -67,7 +70,8 @@ namespace IO.Website.DAL.Entities
         public string Phone
         {
             get { return _Phone; }
-            set {
+            set
+            {
                 _Phone = value;
                 _PropertyBag.AddOrUpdateProperty(SiteColumns.PHONE, value);
             }
@@ -77,7 +81,8 @@ namespace IO.Website.DAL.Entities
         public string Mobile
         {
             get { return _Mobile; }
-            set { 
+            set
+            {
                 _Mobile = value;
                 _PropertyBag.AddOrUpdateProperty(SiteColumns.MOBILE, value);
             }
@@ -87,7 +92,8 @@ namespace IO.Website.DAL.Entities
         public string City
         {
             get { return _City; }
-            set {
+            set
+            {
                 _City = value;
                 _PropertyBag.AddOrUpdateProperty(SiteColumns.CITY, value);
             }
@@ -97,7 +103,8 @@ namespace IO.Website.DAL.Entities
         public string Subject
         {
             get { return _Subject; }
-            set {
+            set
+            {
                 _Subject = value;
                 _PropertyBag.AddOrUpdateProperty(SiteColumns.SUBJECT, value);
             }
@@ -107,7 +114,8 @@ namespace IO.Website.DAL.Entities
         public string OtherSubject
         {
             get { return _OtherSubject; }
-            set { 
+            set
+            {
                 _OtherSubject = value;
                 _PropertyBag.AddOrUpdateProperty(SiteColumns.OTHER_SUBJECT, value);
             }
@@ -143,23 +151,44 @@ namespace IO.Website.DAL.Entities
 
         public void Save(string contextUrl, string listUrl)
         {
-            SPSecurity.RunWithElevatedPrivileges(delegate() {
+            SPSecurity.RunWithElevatedPrivileges(delegate()
+            {
                 using (SPSite site = new SPSite(contextUrl))
                 {
                     using (SPWeb web = site.OpenWeb())
                     {
                         SPList targetList = web.GetList(string.Format("{0}/{1}", web.Url, listUrl));
                         web.AllowUnsafeUpdates = true;
-                        
+
                         AddListItemCommand addListItemCommand = new AddListItemCommand(ContentTypes.CONTACT_REQUEST_ID, _PropertyBag, targetList, web);
                         addListItemCommand.Execute();
-                        
+
                         _ID = addListItemCommand.ListItem.ID;
                         web.AllowUnsafeUpdates = false;
+
+                        SPWeb rootWeb = site.RootWeb;
+                        MailConfigEntity mailConfigurationSettings = MailConfigEntity.Get(rootWeb);
+
+                        AspNetMailHelper aspNetMailHelper = default(AspNetMailHelper);
+                        if (mailConfigurationSettings.UseSharepointDefaultConfig)
+                        {
+                            aspNetMailHelper = new AspNetMailHelper(SPAdministrationWebApplication.Local.OutboundMailServiceInstance.Server.Address);
+                        }
+                        else
+                        {
+                            aspNetMailHelper = new AspNetMailHelper(mailConfigurationSettings.MailServerAddress, mailConfigurationSettings.Port, mailConfigurationSettings.UseSSL
+                                , mailConfigurationSettings.UserName, mailConfigurationSettings.Password);
+                        }
+
+                        string messageBody = 
+                            string.Format("Buen dia.\nSe ha recibido un registro de solicitd de contacto de parte de {0} {1}.\nPara ver la informacion completa del registro siga esta url\n{2}\nSaludos.\nEl equipo web de IO."
+                            , this._FirstName, this._LastName, addListItemCommand.ListItem.Url);
+
+                        aspNetMailHelper.SendTextMail(this._Email, mailConfigurationSettings.InboundMailAddress, "Registro de Solicitud de Contacto", messageBody);
                     }
                 }
             });
-            
+
         }
 
         public void Save(string listUrl)
@@ -168,7 +197,7 @@ namespace IO.Website.DAL.Entities
             SPList targetList = web.GetList(string.Format("{0}/{1}", web.Url, listUrl));
             try
             {
-                
+
                 web.AllowUnsafeUpdates = true;
                 AddListItemCommand addListItemCommand = new AddListItemCommand(ContentTypes.CONTACT_REQUEST_ID, _PropertyBag, targetList, web);
                 addListItemCommand.Execute();
@@ -178,10 +207,11 @@ namespace IO.Website.DAL.Entities
             {
                 throw;
             }
-            finally {
+            finally
+            {
                 web.AllowUnsafeUpdates = false;
             }
-            
+
         }
 
     }

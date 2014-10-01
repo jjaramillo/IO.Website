@@ -167,6 +167,10 @@
       <Project>{5808f93c-d092-414d-8777-89ac963f836c}</Project>
       <Name>IO.Website.DAL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\IO.Website.Support\IO.Website.Support.csproj">
+      <Project>{bcd8e638-c7c7-41ee-815c-5ceb56e24964}</Project>
+      <Name>IO.Website.Support</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Content Include="BrochureDownload\BrochureDownloadUserControl.ascx" />

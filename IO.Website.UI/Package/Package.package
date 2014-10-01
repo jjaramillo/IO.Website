@@ -2,6 +2,7 @@
 <package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" dslVersion="1.0.0.0" Id="cfa8602d-a635-49ef-8df4-bcc5391a6433" solutionId="cfa8602d-a635-49ef-8df4-bcc5391a6433" resetWebServer="false" sharePointProductVersion="15.0" name="IO.Website.UI" xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel">
   <assemblies>
     <projectOutputAssembly location="IO.Website.DAL.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\IO.Website.DAL\IO.Website.DAL.csproj" />
+    <projectOutputAssembly location="IO.Website.Support.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\IO.Website.Support\IO.Website.Support.csproj" />
   </assemblies>
   <features>
     <featureReference itemId="178205a5-926d-4138-b7e1-962c1fa89b3a" />

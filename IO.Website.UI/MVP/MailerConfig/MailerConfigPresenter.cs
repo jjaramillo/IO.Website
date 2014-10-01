@@ -1,4 +1,5 @@
 ﻿using IO.Website.DAL.Entities;
+using IO.Website.Support;
 using Microsoft.SharePoint;
 using Microsoft.SharePoint.Administration;
 using Microsoft.SharePoint.Utilities;
@@ -32,32 +33,23 @@ namespace IO.Website.UI.MVP.MailerConfig
 
         public void HideAspNetMailParameters() { _View.HideAspNetMailParameters(); }
 
-        public void TestMailSettings() 
+        public void TestMailSettings()
         {
-            string smtpServer = string.Empty;
-            SmtpClient smtpClient = default(SmtpClient);
+            AspNetMailHelper aspNetMailHelper = default(AspNetMailHelper);
             if (_View.UseSharepointDefaultConfig)
             {
                 if (!SPUtility.IsEmailServerSet(_Web))
                     throw new Exception("El servidor de correo no se encuentra configurado para este sitio");
-                smtpServer = SPAdministrationWebApplication.Local.OutboundMailServiceInstance.Server.Address;
-                smtpClient = new SmtpClient(smtpServer);
+                aspNetMailHelper = new AspNetMailHelper(SPAdministrationWebApplication.Local.OutboundMailServiceInstance.Server.Address);
+                
             }
-            else {
-                smtpClient = new SmtpClient(_View.MailServerAddress, _View.Port);
-                smtpClient.EnableSsl = _View.UseSSL;
-                smtpClient.Credentials = new NetworkCredential(_View.UserName, _View.Password);
+            else
+            {
+                aspNetMailHelper = new AspNetMailHelper(_View.MailServerAddress, _View.Port, _View.UseSSL, _View.UserName, _View.Password);                
 
             }
 
-       
-            MailMessage mailMessage = new MailMessage(_View.OutboundMailAddress, _View.InboundMailAddress);
-
-            mailMessage.Subject = "Correo de Prueba de IO";
-            mailMessage.Body = "Esto es un correo de prueba enviado por la caracteristica de configuracion de envios de correos electronicos. Por favor ignore este mensaje.";
-            mailMessage.IsBodyHtml = false;           
-
-            smtpClient.Send(mailMessage);
+            aspNetMailHelper.SendTextMail(_View.OutboundMailAddress, _View.InboundMailAddress, "Correo de Prueba de IO", "Esto es un correo de prueba enviado por la caracteristica de configuracion de envios de correos electronicos./nPor favor ignore este mensaje./nSaludos/nEl equipo web de IO.");            
         }
 
         public void Save()
@@ -71,38 +63,36 @@ namespace IO.Website.UI.MVP.MailerConfig
             mailConfig.UserName = _View.UserName;
             mailConfig.UseSharepointDefaultConfig = _View.UseSharepointDefaultConfig;
             mailConfig.UseSSL = _View.UseSSL;
-            string parameterValue = string.Empty;
-            using(TextWriter writer = new StringWriter())
-            {
-                XmlSerializer serializer = new XmlSerializer(mailConfig.GetType());
-                serializer.Serialize(writer, mailConfig);
-                parameterValue = writer.ToString();
-            }
             SPWeb rootWeb = _Web.Site.RootWeb;
-            rootWeb.AllowUnsafeUpdates = true;
-            if (rootWeb.Properties.ContainsKey("MailConfig"))
-            {
-                rootWeb.Properties["MailConfig"] = parameterValue;
-            }
-            else 
-            {
-                rootWeb.Properties.Add("MailConfig",  parameterValue);
-            }
-            rootWeb.Properties.Update();
-            rootWeb.AllowUnsafeUpdates = false;
-            
+            mailConfig.Save(rootWeb);
+            //string parameterValue = string.Empty;
+            //using(TextWriter writer = new StringWriter())
+            //{
+            //    XmlSerializer serializer = new XmlSerializer(mailConfig.GetType());
+            //    serializer.Serialize(writer, mailConfig);
+            //    parameterValue = writer.ToString();
+            //}
+            //SPWeb rootWeb = _Web.Site.RootWeb;
+            //rootWeb.AllowUnsafeUpdates = true;
+            //if (rootWeb.Properties.ContainsKey("MailConfig"))
+            //{
+            //    rootWeb.Properties["MailConfig"] = parameterValue;
+            //}
+            //else 
+            //{
+            //    rootWeb.Properties.Add("MailConfig",  parameterValue);
+            //}
+            //rootWeb.Properties.Update();
+            //rootWeb.AllowUnsafeUpdates = false;
+
         }
 
         public void Load()
         {
             SPWeb rootWeb = _Web.Site.RootWeb;
-            string parameterValue = rootWeb.Properties.ContainsKey("MailConfig") ? rootWeb.Properties["MailConfig"] : string.Empty;
-            if (!string.IsNullOrEmpty(parameterValue))
-            {                
-                XmlSerializer serializer = new XmlSerializer(typeof(MailConfigEntity));
-                TextReader reader = new StringReader(parameterValue);
-                MailConfigEntity mailConfig = (MailConfigEntity)serializer.Deserialize(reader);
-
+            MailConfigEntity mailConfig = MailConfigEntity.Get(rootWeb);
+            if (mailConfig != default(MailConfigEntity))
+            {
                 _View.InboundMailAddress = mailConfig.InboundMailAddress;
                 _View.OutboundMailAddress = mailConfig.OutboundMailAddress;
                 _View.Port = mailConfig.Port = mailConfig.Port;
@@ -111,6 +101,7 @@ namespace IO.Website.UI.MVP.MailerConfig
                 _View.UserName = mailConfig.UserName;
                 _View.UseSharepointDefaultConfig = mailConfig.UseSharepointDefaultConfig;
             }
+
         }
     }
 }

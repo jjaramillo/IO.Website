@@ -1,6 +1,8 @@
 ﻿using IO.Website.DAL.Support;
+using IO.Website.Support;
 using Jjaramillo.SP2013.Transactions.Commands.ListItem;
 using Microsoft.SharePoint;
+using Microsoft.SharePoint.Administration;
 using System;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
@@ -132,6 +134,26 @@ namespace IO.Website.DAL.Entities
                         AddListItemCommand addListItemCommand = new AddListItemCommand(ContentTypes.DEMO_REQUEST_ID, _PropertyBag, targetList, web);
                         addListItemCommand.Execute();
                         _ID = addListItemCommand.ListItem.ID;
+
+                        SPWeb rootWeb = site.RootWeb;
+                        MailConfigEntity mailConfigurationSettings = MailConfigEntity.Get(rootWeb);
+
+                        AspNetMailHelper aspNetMailHelper = default(AspNetMailHelper);
+                        if (mailConfigurationSettings.UseSharepointDefaultConfig)
+                        {
+                            aspNetMailHelper = new AspNetMailHelper(SPAdministrationWebApplication.Local.OutboundMailServiceInstance.Server.Address);
+                        }
+                        else
+                        {
+                            aspNetMailHelper = new AspNetMailHelper(mailConfigurationSettings.MailServerAddress, mailConfigurationSettings.Port, mailConfigurationSettings.UseSSL
+                                , mailConfigurationSettings.UserName, mailConfigurationSettings.Password);
+                        }
+
+                        string messageBody =
+                            string.Format("Buen dia.\nSe ha recibido un registro de solicitd de demo de parte de {0} {1}.\nPara ver la informacion completa del registro siga esta url\n{2}\nSaludos.\nEl equipo web de IO."
+                            , this._FirstName, this._LastName, addListItemCommand.ListItem.Url);
+
+                        aspNetMailHelper.SendTextMail(this._Email, mailConfigurationSettings.InboundMailAddress, "Registro de Solicitud de Demo", messageBody);
                     }
                 }
             });

@@ -32,6 +32,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Packages", "Packages", "{3A
 		Powershell\Packages\RioLinx.SharePoint.Responsive.Server.wsp = Powershell\Packages\RioLinx.SharePoint.Responsive.Server.wsp
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IO.Website.Support", "IO.Website.Support\IO.Website.Support.csproj", "{BCD8E638-C7C7-41EE-815C-5CEB56E24964}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -66,6 +68,10 @@ Global
 		{D6491CB5-D206-4A12-A799-1EE687CDCBAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D6491CB5-D206-4A12-A799-1EE687CDCBAB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D6491CB5-D206-4A12-A799-1EE687CDCBAB}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{BCD8E638-C7C7-41EE-815C-5CEB56E24964}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCD8E638-C7C7-41EE-815C-5CEB56E24964}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCD8E638-C7C7-41EE-815C-5CEB56E24964}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCD8E638-C7C7-41EE-815C-5CEB56E24964}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
