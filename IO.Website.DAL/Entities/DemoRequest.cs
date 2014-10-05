@@ -118,7 +118,7 @@ namespace IO.Website.DAL.Entities
             Email = email;
             Phone = phone;
             Mobile = mobile;
-            City = city;            
+            City = city;
         }
 
         public void Save(string contextUrl, string listUrl)
@@ -151,7 +151,7 @@ namespace IO.Website.DAL.Entities
 
                         string messageBody =
                             string.Format("Buen dia.\nSe ha recibido un registro de solicitd de demo de parte de {0} {1}.\nPara ver la informacion completa del registro siga esta url\n{2}\nSaludos.\nEl equipo web de IO."
-                            , this._FirstName, this._LastName, addListItemCommand.ListItem.Url);
+                            , this._FirstName, this._LastName, string.Format("{0}/_layouts/15/listform.aspx?PageType=4&ListId={1}&ID={2}&ContentTypeID={3}", web.Url, addListItemCommand.List.ID, addListItemCommand.ListItem.ID, addListItemCommand.ListItem.ContentTypeId));
 
                         aspNetMailHelper.SendTextMail(this._Email, mailConfigurationSettings.InboundMailAddress, "Registro de Solicitud de Demo", messageBody);
                     }
