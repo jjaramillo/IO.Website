@@ -15,17 +15,18 @@ var ProductSliderViewModel = function (sliderType) {
     }
 
     function OnSuccess(data, status, jqXHR) {
-        var result = data.GetProductSlidesResult;
+        var result = _sliderType == 'Poxta' ? data.GetPoxtaProductSlidesResult : data.GetMemexProductSlidesResult;
         for (var i = 0; i < result.length; i++) {
             var container = {};
             container.Childs = ko.observableArray();
             for (var index = 0; index < 3 && i < result.length; index++) {
                 var currentPicture = result[i];
                 currentPicture.OpenVideo = function () {
+                    var picture = this;
                     SP.UI.ModalDialog.showModalDialog(
                         {
-                            title: currentPicture.YoutubeVideoTitle,
-                            url: currentPicture.YoutubeUrl,
+                            title: picture.YoutubeVideoTitle,
+                            url: picture.YoutubeUrl,
                             autosize: true,
                             allowMaximize: false,
                             showClose: true
