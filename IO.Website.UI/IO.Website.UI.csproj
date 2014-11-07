@@ -160,7 +160,9 @@
     <None Include="WorkWithUsRequest\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{0cdf3725-ab89-41a0-9e51-651f7a3b3b67}</SharePointProjectItemId>
     </None>
-    <None Include="WorkWithUsRequest\WorkWithUsRequest.webpart" />
+    <None Include="WorkWithUsRequest\WorkWithUsRequest.webpart">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\IO.Website.DAL\IO.Website.DAL.csproj">
@@ -193,12 +195,15 @@
     <Content Include="INC\IO.Website\js\knockout-3.2.0.js" />
     <Content Include="INC\IO.Website\js\knockout.validation.js" />
     <Content Include="INC\IO.Website\js\knockout.validation.min.js" />
+    <Content Include="INC\IO.Website\js\ko.fileupload.extension.js" />
     <Content Include="INC\IO.Website\js\ProductsSliderViewModel.js" />
     <Content Include="INC\IO.Website\js\WorkWithUsRequestViewModel.js" />
     <Content Include="Layouts\IO.Website\MailerConfig.aspx" />
     <Content Include="ProductsSlider\Elements.xml" />
     <Content Include="ProductsSlider\ProductsSliderUserControl.ascx" />
-    <Content Include="WorkWithUsRequest\Elements.xml" />
+    <Content Include="WorkWithUsRequest\Elements.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="WorkWithUsRequest\WorkWithUsRequestUserControl.ascx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

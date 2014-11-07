@@ -6,3 +6,35 @@
 <%@ Import Namespace="Microsoft.SharePoint" %> 
 <%@ Register Tagprefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" %>
 <%@ Control Language="C#" AutoEventWireup="true" CodeBehind="WorkWithUsRequestUserControl.ascx.cs" Inherits="IO.Website.UI.WorkWithUsRequest.WorkWithUsRequestUserControl" %>
+<asp:ScriptManagerProxy runat="server" ID="scptmgrpx">
+    <Scripts>        
+        <asp:ScriptReference Path="/_layouts/15/INC/IO.Website/js/knockout-3.2.0.js" />
+        <asp:ScriptReference Path="/_layouts/15/INC/IO.Website/js/knockout.validation.js" />
+        <asp:ScriptReference Path="/_layouts/15/INC/IO.Website/js/ko.fileupload.extension.js" />
+        <asp:ScriptReference Path="/_layouts/15/INC/IO.Website/js/WorkWithUsRequestViewModel.js" />
+    </Scripts>
+</asp:ScriptManagerProxy>
+<div id="workwithus_request_form_container" runat="server">
+    <div data-bind="visible: formvisible">
+        <div>
+            <label>Nombres:</label>
+            <input type="text" maxlength="60" data-bind="value: firstName" />
+        </div>
+        <div>
+            <label>Apellidos:</label>
+            <input type="text" maxlength="60" data-bind="value: lastName" />
+        </div>        
+        <div>
+            <label>Email:</label>
+            <input type="text" maxlength="60" data-bind="value: email" />
+        </div>
+        <div>
+            <label>Adjunte su curriculum:</label>
+            <input type="file" data-bind="FileUpload: file, fileBinaryData: fileBinary" />
+        </div>        
+        <div>
+            <button onclick="void(0);" data-bind="click: Save">Enviar</button>
+        </div>
+    </div>
+    <div data-bind="visible: messagevisible">Mensaje de Exito</div>
+</div>

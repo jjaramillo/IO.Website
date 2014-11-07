@@ -58,10 +58,12 @@
     <Compile Include="Contracts\IContactRequest.cs" />
     <Compile Include="Contracts\IDemoRequest.cs" />
     <Compile Include="Contracts\ISlider.cs" />
+    <Compile Include="Contracts\IWorkWithUsRequest.cs" />
     <Compile Include="DemoRequestService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SliderService.cs" />
     <Compile Include="Support\ListUrls.cs" />
+    <Compile Include="WorkWithUsRequestService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ISAPI\SharePointProjectItem.spdata">
@@ -79,6 +81,7 @@
     <Folder Include="Features\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ISAPI\IO.Website.API\WorkWithUsRequestService.svc" />
     <Content Include="ISAPI\IO.Website.API\SliderService.svc" />
     <Content Include="ISAPI\IO.Website.API\DemoRequest.svc" />
     <Content Include="ISAPI\IO.Website.API\ContactRequestService.svc" />
