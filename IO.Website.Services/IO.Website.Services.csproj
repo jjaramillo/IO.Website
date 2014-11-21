@@ -60,12 +60,18 @@
     <Compile Include="Contracts\ISlider.cs" />
     <Compile Include="Contracts\IWorkWithUsRequest.cs" />
     <Compile Include="DemoRequestService.cs" />
+    <Compile Include="Features\IOWebsiteMessageSize\IOWebsiteMessageSize.EventReceiver.cs">
+      <DependentUpon>IOWebsiteMessageSize.feature</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SliderService.cs" />
     <Compile Include="Support\ListUrls.cs" />
     <Compile Include="WorkWithUsRequestService.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Features\IOWebsiteMessageSize\IOWebsiteMessageSize.feature">
+      <FeatureId>{59426f04-d449-4d17-a4b5-da293df068e3}</FeatureId>
+    </None>
     <None Include="ISAPI\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{3a009529-6add-4a8c-9ebf-5d5b2626a928}</SharePointProjectItemId>
     </None>
@@ -77,11 +83,12 @@
       <DependentUpon>Package.package</DependentUpon>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Features\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="ISAPI\IO.Website.API\WorkWithUsRequestService.svc" />
+    <Content Include="Features\IOWebsiteMessageSize\IOWebsiteMessageSize.Template.xml">
+      <DependentUpon>IOWebsiteMessageSize.feature</DependentUpon>
+    </Content>
+    <Content Include="ISAPI\IO.Website.API\workwithusrequestservice.svc" />
     <Content Include="ISAPI\IO.Website.API\SliderService.svc" />
     <Content Include="ISAPI\IO.Website.API\DemoRequest.svc" />
     <Content Include="ISAPI\IO.Website.API\ContactRequestService.svc" />

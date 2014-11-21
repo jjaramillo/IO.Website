@@ -4,6 +4,9 @@
     <customAssembly location="Jjaramillo.SP2013.Transactions.dll" deploymentTarget="GlobalAssemblyCache" sourcePath="..\References\Jjaramillo.SP2013.Transactions.dll" />
     <projectOutputAssembly location="IO.Website.DAL.dll" deploymentTarget="GlobalAssemblyCache" projectPath="..\IO.Website.DAL\IO.Website.DAL.csproj" />
   </assemblies>
+  <features>
+    <featureReference itemId="59426f04-d449-4d17-a4b5-da293df068e3" />
+  </features>
   <projectItems>
     <projectItemReference itemId="3a009529-6add-4a8c-9ebf-5d5b2626a928" />
   </projectItems>

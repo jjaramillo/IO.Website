@@ -1,4 +1,6 @@
-﻿using IO.Website.Services.Contracts;
+﻿using IO.Website.DAL.Entities;
+using IO.Website.Services.Contracts;
+using IO.Website.Services.Support;
 using System;
 using System.ServiceModel;
 using System.ServiceModel.Activation;
@@ -11,9 +13,14 @@ namespace IO.Website.Services
     public class WorkWithUsRequestService : IWorkWithUsRequest
     {
         [WebInvoke(Method = "PUT", RequestFormat = WebMessageFormat.Json, ResponseFormat = WebMessageFormat.Json, UriTemplate = "Add", BodyStyle = WebMessageBodyStyle.Wrapped)]
-        public void AddWorkWithUsRequest(string firstName, string lastName, string email, string fileName, byte[] fileData, string siteCollectionUrl)
+        public void AddWorkWithUsRequest(string firstName, string lastName, string email, string fileName, string fileData, string siteCollectionUrl)
         {
-            throw new NotImplementedException();
+            try
+            {
+                WorkWithUs workWithUs = new WorkWithUs(firstName, lastName, email, fileName, fileData);
+                workWithUs.Save(siteCollectionUrl, ListUrls.WORK_WITH_US_REQUESTS_URL);
+            }
+            catch (Exception) { throw; }
         }
     }
 }

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.ServiceModel;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ServiceModel;
 
 namespace IO.Website.Services.Contracts
 {
@@ -11,6 +6,6 @@ namespace IO.Website.Services.Contracts
     internal interface IWorkWithUsRequest
     {
         [OperationContract]
-        void AddWorkWithUsRequest(string firstName, string lastName, string email, string fileName, byte[] fileData, string siteCollectionUrl);
+        void AddWorkWithUsRequest(string firstName, string lastName, string email, string fileName, string fileData, string siteCollectionUrl);
     }
 }

@@ -11,12 +11,15 @@ var WorkWithUsRequestViewModel = function () {
 
 
     function OnError(jqXHR, status, errorMessage) {
+        SP.UI.ModalDialog.commonModalDialogClose(SP.UI.DialogResult.OK);
         _statusID = SP.UI.Status.addStatus('Error', errorMessage, true);
         SP.UI.Status.setStatusPriColor(_statusID, 'red');
     }
 
     function OnSuccess(data, status, jqXHR) {
-
+        SP.UI.ModalDialog.commonModalDialogClose(SP.UI.DialogResult.OK);
+        _self.formvisible(false);
+        _self.messagevisible(true);
     }
 
     this.firstName = ko.observable('').extend({ required: true });
